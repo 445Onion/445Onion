@@ -1,4 +1,3 @@
-### Hi there 👋
+### Test Page
 
-This is my first attempt at creating a sidebar on a website. 
-Much of the content is copypasted from freecodecamp.
+Implementing tips and tricks I picked up from freecodecamp to create a site for Blue Archive characters.
