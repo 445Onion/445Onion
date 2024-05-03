@@ -172,7 +172,7 @@ button:hover{
 .filter-container {
   border: none;
   border-radius: 15px;
-  padding: 20px 30px;
+  padding: 30px 30px;
   width: 90%;
   margin: 0 auto;
   gap: 25px;
@@ -186,7 +186,7 @@ button:hover{
   border-style: solid;
   border-color: #fff;
   border-radius: 15px;
-  padding: 15px 25px;
+  padding: 10px 15px;
   width: 250px;
   height: auto;
 }
