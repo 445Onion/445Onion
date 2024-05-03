@@ -4,7 +4,7 @@
         <meta charset="UTF-8"/>
         <title>445Onion's Website</title>
 
-        <!-- font-awesome -->
+        <!-- font-awesome for icons -->
         <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -14,28 +14,109 @@
         <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
-        <button class="sidebar-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <button class="close-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
+        <!-- header should be sticky, flex, dropdown menu -->
+        <div class="page-header">
+            <div class="logo">
+                <h1>445Onion</h1>
             </div>
-            <!-- styles -->
-            <ul class="links">
-                <li>
-                    <a href="index.html">home</a>
-                </li>
-                <li>
-                    <a href="about.html">about</a>
-                </li>
-                <li>
-                    <a href="projects.html">projects</a>
-                </li>
-            </ul>
-        </aside>
+            <div class="dropdown">
+                <button class="header-button">
+                    Navigation
+                    <i class="fa fa-angle-down" style="font-size:18px"></i>
+                </button>
+                <div class="dropdown-items">
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="header-button">
+                    Official Links
+                    <i class="fa fa-angle-down" style="font-size:18px"></i>
+                </button>
+                <div class="dropdown-items">
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="header-button">
+                    Socials
+                    <i class="fa fa-angle-down" style="font-size:18px"></i>
+                </button>
+                <div class="dropdown-items">
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                </div>
+            </div>
+        </div>
+        <!-- flex main container to hold and arrange all content containers -->
+        <div class="main-container">
+
+            <!-- introduction container, nothing much to say-->
+            <div class="introduction-container">
+                <div class="about-container">
+                    <!-- expect to put a subheader, followed by
+                    a horizontal picture and texts -->
+                        <h2>About</h2>
+                        <div class="underline"></div>
+                        <p>Hi, this is a page where I put my newly acquired Javascript skills to the test.
+                        I have decided to create a page where I can organise my favourtie characters in 
+                        Blue Archive according to the school they are affiliated with.
+                        Work still in progress though.
+                        </p>
+                </div>
+                <div class="links-container">
+                    <!-- a smaller container than about container
+                    intend to put some links, maybe a rickroll -->
+                    <h2>Links</h2>
+                    <div class="underline"></div>
+                    <P>Some interesting links</P>
+                </div>
+            </div>
+
+            <!-- sorting container with buttons to filter items, tbc -->
+            <div class="sorting-container">
+                <!-- intend to implement menu style filtering
+                from freecodecamp javascript video -->
+                <div class="button-container">
+                    <button class="filter-button" data-id="All">All</button>
+                    <button class="filter-button" data-id="Abydos">Abydos</button>
+                    <button class="filter-button" data-id="Gehenna">Gehenna</button>
+                    <button class="filter-button" data-id="Millenium">Millenium</button>
+                    <button class="filter-button" data-id="Trinity">Trinity</button>
+                </div>
+                <div class="underline"></div>
+                <div class="filter-container">
+                    <!-- grouped up info for single character -->
+                    <article class="single-character">
+                        <!-- insert img src later -->
+                        <div class="character-info">
+                            <header>
+                                <p class="character">Character Name</p>
+                                <p class="affliation">Affiliation</p>
+                                <p class="dmg-type">Dmg type</p>
+                            </header>
+                            <p class="character-description">
+                                A very interesting description.
+                            </p>
+                        </div>
+                    </article>
+                    <!-- end of grouped up info for single character -->
+                </div>
+            </div>
+
+            <!-- closing container, similar to intro container -->
+            <div class="closing-container">
+                <!-- closing statement and author -->
+                <p>Thanks for visiting!</p>
+                <p>Created by 445Onion</p>
+            </div>
+        </div>
+
         <!-- javascript -->
         <script src="app.js"></script>
     </body>
