@@ -9,7 +9,7 @@ h2 {
   color: #fff;
 }
 h3 {
-  font-size: 18px;
+  font-size: 22px;
   color: #fff;
 }
 p {
@@ -189,6 +189,28 @@ button:hover{
   padding: 10px 15px;
   width: 250px;
   height: auto;
+}
+
+.img {
+  border-radius: 15px;
+  max-width: 80%;
+  height: auto;
+  padding: 15px;
+}
+
+.character {
+  font-size: 26px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.club {
+  font-size: 18px;
+  color: #fff;
+}
+.description {
+  font-size: 18px;
+  color: #fff;
 }
 
 /* closing container */

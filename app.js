@@ -3,50 +3,56 @@ const list = [
     {
         character: "Takanashi Hoshino",
         affiliation: "Abydos",
-        dmgType: "Damage Type: Piercing",
+        club: "Abydos Foreclosure Taskforce",
         description: "Strongest mystic in Kivotos",
+        img: "./images/SHoshino.png"
     },
     {
         character: "Sunaookami Shiroko",
         affiliation: "Abydos",
-        dmgType: "Damage Type: Mystic",
+        club: "Abydos Foreclosure Taskforce",
         description: "Wolf not cat",
+        img: "./images/SShiroko.png"
     },
     {
         character: "Okusora Ayane",
         affiliation: "Abydos",
-        dmgType: "Damage Type: Piercing",
+        club: "Abydos Foreclosure Taskforce",
         description: "Technical support of Abydos",
+        img: "./images/SAyane4k.png"
     },
     {
         character: "Hayase Yuuka",
         affiliation: "Millenium",
-        dmgType: "Damage Type: Explosive",
+        club: "Seminar",
         description: "100kg human calculator",
+        img: "./images/SYuuka.png"
     },
     {
         character: "Kurosaki Koyuki",
         affiliation: "Millenium",
-        dmgType: "Damage Type: Mystic",
+        club: "Seminar",
         description: "Nihahahaha",
     },
     {
         character: "Sorasaki Hina",
         affiliation: "Gehenna",
-        dmgType: "Damage Type: Explosive",
+        club: "Disciplinary Committee",
         description: "Gehenna president",
+        img: "./images/HinaDress.png"
     },
     {
         character: "Onikata Kayoko",
         affiliation: "Gehenna",
-        dmgType: "Damage Type: Explosive",
+        club: "Problem Solver 68",
         description: "Heavy metal listener",
     },
     {
         character: "Misono Mika",
         affiliation: "Trinity",
-        dmgType: "Damage Type: Piercing",
+        club: "Tea Party",
         description: "Biggest Gehenna hater",
+        img: "./images/MainStory(1).png"
     },
 ];
 
@@ -79,9 +85,10 @@ function displayListCharacters(listCharacter) {
         return `<article class="single-character">
             <div class="character-info">
                 <header>
+                    <p class="character">${character.img}</p>
                     <p class="character">${character.character}</p>
                     <p class="affliation" ${character.affiliation}</p>
-                    <p class="dmg-type">${character.dmgType}</p>
+                    <p class="affliation" ${character.club}</p>
                 </header>
                 <p class="character-description">
                     ${character.description}
