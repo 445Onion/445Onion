@@ -33,6 +33,7 @@ const list = [
         affiliation: "Millenium",
         club: "Seminar",
         description: "Nihahahaha",
+        img: "./images/Placeholder.jpg"
     },
     {
         character: "Sorasaki Hina",
@@ -46,13 +47,14 @@ const list = [
         affiliation: "Gehenna",
         club: "Problem Solver 68",
         description: "Heavy metal listener",
+        img: "./images/Placeholder.jpg"
     },
     {
         character: "Misono Mika",
         affiliation: "Trinity",
         club: "Tea Party",
         description: "Biggest Gehenna hater",
-        img: "./images/MainStory(1).png"
+        img: "./images/Placeholder.jpg"
     },
 ];
 
@@ -83,12 +85,12 @@ filterButton.forEach(function (button) {
 function displayListCharacters(listCharacter) {
     let displayList = listCharacter.map(function(character) {
         return `<article class="single-character">
+            <img src=${character.img} class="character-photo"/>
             <div class="character-info">
                 <header>
-                    <p class="character">${character.img}</p>
                     <p class="character">${character.character}</p>
                     <p class="affliation" ${character.affiliation}</p>
-                    <p class="affliation" ${character.club}</p>
+                    <p class="club" ${character.club}</p>
                 </header>
                 <p class="character-description">
                     ${character.description}

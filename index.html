@@ -35,8 +35,8 @@
                 </button>
                 <div class="dropdown-items">
                     <a href="#">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#students">Students</a>
+                    <a href="#section-about">About</a>
+                    <a href="#section-students">Students</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -65,12 +65,14 @@
         <!-- flex main container to hold and arrange all content containers -->
         <div class="main-container">
             <!-- introduction container, nothing much to say-->
-            <div id="about" class="introduction-container">
+            <section id="section-about"></section>
+            <div class="introduction-container">
                 <div class="about-container">
                     <!-- expect to put a subheader, followed by
                     a horizontal picture and texts -->
                         <h2>About</h2>
                         <div class="underline"></div>
+                        <img src="./images/AronaMaintenance.PNG" class="about-photo"/>
                         <p>Hi, this is a page where I put my newly acquired Javascript skills to the test.
                         I have decided to create a page where I can organise my favourtie characters in 
                         Blue Archive according to the school they are affiliated with.
@@ -87,7 +89,8 @@
             </div>
 
             <!-- sorting container with buttons to filter items, tbc -->
-            <div id="students" class="sorting-container">
+            <section id="section-students"></section>
+            <div class="sorting-container">
                 <!-- intend to implement menu style filtering
                 from freecodecamp javascript video -->
                 <div class="button-container">
@@ -101,8 +104,8 @@
                 <div class="filter-container">
                     <!-- grouped up info for single character -->
                     <article class="single-character">
-                        <!-- insert img src later -->
-                        <div class="character-info">
+                        <!-- replaced in app.js -->
+                        <!-- <div class="character-info">
                             <header>
                                 <p class="character">Character Name</p>
                                 <p class="affliation">Affiliation</p>
@@ -111,7 +114,7 @@
                             <p class="character-description">
                                 A very interesting description.
                             </p>
-                        </div>
+                        </div> -->
                     </article>
                     <!-- end of grouped up info for single character -->
                 </div>
