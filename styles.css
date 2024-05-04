@@ -123,7 +123,7 @@ button:hover{
 
 /* introduction container, contains the about and link container */
 .introduction-container {
-  gap: 15px;
+  gap: 25px;
   border: none;
   border-radius: 15px;
   padding: 30px 30px;
@@ -138,7 +138,7 @@ button:hover{
   border-radius: 15px;
   padding: 10px 30px;
   justify-content: center;
-  width: 70%;
+  width: 65%;
   background-color: #555555;
 }
 
