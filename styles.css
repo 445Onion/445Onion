@@ -236,7 +236,9 @@ button:hover{
   padding: 20px 30px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   width: 90%;
+  height: auto;
   gap: 10px;
   background-color: #333333;
 }
@@ -315,9 +317,6 @@ button:hover{
 
 /* media queries for different screens */
 @media (max-width: 700px) {
-  .body {
-    min-height: 100vh;
-  }
   .header-links-container {
     display: none;
   }
