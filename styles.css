@@ -45,16 +45,18 @@ p {
 }
 
 /* Layout for the bunch of stuff in the header */
-
-.logo {
+.logo a {
   padding: 0 30px;
-  font-size: 24px;
+  font-size: 28px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .header-links-container {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-right: 30px;
 }
 
 .header-button{
@@ -138,12 +140,17 @@ button:hover{
 .show-mobile-dropdown a {
   color: #fff;
   text-decoration: none;
-  padding: 20px 40px;
+  padding: 20px 50px;
 }
 
 .show-mobile-dropdown a:hover {
-  color: #45B6FE;
   background-color: #555555;
+}
+
+.mobile-links-subheader {
+  padding: 10px 30px;
+  font-size: 22px;
+  color: #45B6FE;
 }
 
 .main-container {
