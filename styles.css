@@ -32,6 +32,7 @@ p {
   align-items: center;
   position: sticky; top: 0;
   height: 60px;
+  width: 100vw;
   gap: 10px;
   background-color: #333333;
 }
@@ -200,7 +201,9 @@ button:hover{
   border-radius: 15px;
   padding: 30px 30px;
   width: 90%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
   gap: 25px;
   display: flex;
   flex-wrap: wrap;
@@ -250,7 +253,14 @@ button:hover{
   justify-content: center;
   align-items: center;
   height: 60px;
-  width: 100%;
+  width: 100vw;
   gap: 10px;
   background-color: #333333
+}
+
+/* media queries for different screens */
+@media (max-width: 500px) {
+  .body {
+    min-height: 100vh;
+  }
 }

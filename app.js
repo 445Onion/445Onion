@@ -59,27 +59,12 @@ const list = [
 ];
 
 const filterContainer = document.querySelector(".filter-container");
-const filterButton = document.querySelectorAll(".filter-button");
+const buttonContainer = document.querySelector(".button-container");
 
 // event listener for loading page
 window.addEventListener("DOMContentLoaded", function (){
     displayListCharacters(list);
-});
-
-filterButton.forEach(function (button) {
-    button.addEventListener("click", function(e) {
-        const affiliation = e.currentTarget.dataset.id;
-        const listAffiliation = list.filter(function (listCharacter) {
-            if (listCharacter.affiliation === affiliation) {
-                return listCharacter;
-            }
-        });
-        if (affiliation === "All") {
-            displayListCharacters(list);
-        } else {
-            displayListCharacters(listAffiliation)
-        }
-    });
+    displayAffiliationButtons();
 });
 
 function displayListCharacters(listCharacter) {
@@ -100,4 +85,38 @@ function displayListCharacters(listCharacter) {
     });
     displayList = displayList.join("");
     filterContainer.innerHTML = displayList;
+}
+
+function displayAffiliationButtons () {
+    const affiliations = list.reduce(
+        function(values, character) {
+            if (!values.includes(character.affiliation)) {
+                values.push(character.affiliation);
+            }
+            return values;
+        },
+        ["All"]
+    );
+    const affiliationButtons = affiliations.map(function (affiliation) {
+        return `<button class="filter-button" 
+        data-id=${affiliation}>${affiliation}</button>`;
+    }).join("");
+    buttonContainer.innerHTML = affiliationButtons;
+    const filterButton = document.querySelectorAll(".filter-button");
+    
+    filterButton.forEach(function (button) {
+        button.addEventListener("click", function(e) {
+            const affiliation = e.currentTarget.dataset.id;
+            const listAffiliation = list.filter(function (listCharacter) {
+                if (listCharacter.affiliation === affiliation) {
+                    return listCharacter;
+                }
+            });
+            if (affiliation === "All") {
+                displayListCharacters(list);
+            } else {
+                displayListCharacters(listAffiliation)
+            }
+        });
+    });
 }
