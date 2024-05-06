@@ -29,6 +29,7 @@ p {
 
 .page-header {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   position: sticky; top: 0;
   height: 60px;
@@ -48,6 +49,12 @@ p {
 .logo {
   padding: 0 30px;
   font-size: 24px;
+}
+
+.header-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .header-button{
@@ -96,6 +103,47 @@ button:hover{
   color: #45B6FE;
   background-color: #555555;
   border-radius: 5px;
+}
+
+.mobile-toggle {
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  font-size: 17px;
+  color: #fff;
+  background-color: #333333;
+  cursor: pointer;
+  @media (min-width: 699px) {
+    display: none;
+  }
+}
+
+.mobile-dropdown {
+  width: 100vw;
+  height: 0;
+  overflow: hidden;
+  position: sticky; top: 60px;
+  display: grid;
+}
+
+.show-mobile-dropdown {
+  height: auto;
+  background-color: #333333;
+  @media (min-width: 699px) {
+    display: none;
+  }
+}
+
+.show-mobile-dropdown a {
+  color: #fff;
+  text-decoration: none;
+  padding: 20px 40px;
+}
+
+.show-mobile-dropdown a:hover {
+  color: #45B6FE;
+  background-color: #555555;
 }
 
 .main-container {
@@ -259,8 +307,21 @@ button:hover{
 }
 
 /* media queries for different screens */
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .body {
     min-height: 100vh;
+  }
+  .header-links-container {
+    display: none;
+  }
+  .introduction-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-container {
+    width: 85%;
+  }
+  .links-container {
+    width: 85%;
   }
 }

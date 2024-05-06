@@ -120,3 +120,11 @@ function displayAffiliationButtons () {
         });
     });
 }
+
+// nav bar for mobile devices
+const mobileToggle = document.querySelector(".mobile-toggle");
+const mobileDropdown = document.querySelector(".mobile-dropdown");
+
+mobileToggle.addEventListener("click", function () {
+  mobileDropdown.classList.toggle("show-mobile-dropdown");
+});
